@@ -1,0 +1,154 @@
+main {
+    position: relative; /* Necessário para o pseudoelemento funcionar */
+    z-index: 1;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/globosmartly.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 0.1; /* Ajusta a opacidade da imagem */
+    z-index: -1; /* Garante que o pseudoelemento fique atrás do conteúdo */
+}
+
+.slide {
+    height: auto;
+}
+
+.carousel-caption {
+    margin-bottom: 10%;
+}
+
+.sliderTitle {
+    color: white;
+}
+
+/* Aplicando sombra e borda */
+.img-bordered-shadow {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    /* Mantido */
+}
+
+/* Estilos gerais do rodapé */
+.footer-container {
+    font-family: 'Rubik', sans-serif;
+    background-color: #455A64;
+    /* Cor de fundo alterada */
+}
+
+.footer-container .container-fluid {
+    overflow: hidden;
+    color: #627482 !important;
+    background: #262626;
+    /* Fundo escuro */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Tamanho de fonte dinâmico para pequenos textos */
+.footer-container small {
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important;
+    /* Tamanho fluido */
+    text-align: center;
+}
+
+/* Estilos do logotipo no rodapé */
+.footer-container #logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    /* Mantendo a proporção da imagem */
+}
+
+/* Estilo flexbox centralizado */
+.row .a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para telas menores (mobile) */
+@media (max-width: 768px) {
+    #logo {
+        display: none;
+        /* Esconder logotipo em telas pequenas */
+    }
+
+    body {
+        padding-top: 5rem;
+    }
+
+    .carousel-caption {
+        margin-bottom: -5%;
+    }
+
+    .sliderTitle {
+        font-size: medium;
+    }
+}
+
+/* Texto em negrito no rodapé */
+.footer-container .bold-text {
+    color: #989c9e !important;
+    /* Mudança de cor sutil */
+}
+
+/* Margem superior fluida para grandes espaçamentos */
+.footer-container .mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+/* Tamanho de fonte fluido para títulos no rodapé */
+.footer-container h3 {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+/* Ícones sociais */
+.footer-container .social {
+    font-size: 21px !important;
+    /* Tamanho fixo dos ícones */
+    text-align: center;
+    /* Centralizado */
+}
+
+/* Tamanho de fonte dinâmico para direitos reservados */
+.footer-container .rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important;
+    /* Texto fluido */
+    text-align: center;
+    /* Alinhado ao centro */
+    display: block;
+    /* Exibido como bloco */
+}
+
+/* Cor azul para textos específicos */
+.color-text-blue {
+    color: #627482 !important;
+    /* Azul específico */
+}
+
+/* Links gerais */
+a {
+    color: inherit;
+    /* Herda a cor do elemento pai */
+    text-decoration: none;
+    /* Remove o sublinhado */
+}
+
+/* Hover para links */
+a:hover {
+    color: #627482;
+    /* Cor azul ao passar o mouse */
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
