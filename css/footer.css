@@ -3,6 +3,41 @@ main {
     z-index: 1;
 }
 
+.sliderTitle {
+    font-size: 1.25rem;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    font-weight: bold;
+    color: white;
+    background-color: #24292E;
+}
+
+@media (max-width: 430px) {
+    .banner {
+        font-size: small;
+    }
+    .sliderTitle{
+        font-size: small;
+    }
+}
+
+@media (min-width: 950px) {
+    .sliderTitle{
+        font-size: 2rem;
+    }
+
+    .carousel-caption{        
+        margin-bottom: 10%;
+    }
+}
+
 main::before {
     content: "";
     position: absolute;
@@ -17,24 +52,6 @@ main::before {
     z-index: -1; /* Garante que o pseudoelemento fique atrás do conteúdo */
 }
 
-.slide {
-    height: auto;
-}
-
-.carousel-caption {
-    margin-bottom: 10%;
-}
-
-.sliderTitle {
-    color: white;
-}
-
-/* Aplicando sombra e borda */
-.img-bordered-shadow {
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
-    /* Mantido */
-}
 
 /* Estilos gerais do rodapé */
 .footer-container {
@@ -85,13 +102,6 @@ main::before {
         padding-top: 5rem;
     }
 
-    .carousel-caption {
-        margin-bottom: -5%;
-    }
-
-    .sliderTitle {
-        font-size: medium;
-    }
 }
 
 /* Texto em negrito no rodapé */
