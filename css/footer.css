@@ -7,34 +7,115 @@ main {
     font-size: 1.25rem;
 }
 
-.banner {
+.banner4{
     display: flex;
     width: 100%;
-    text-align: center;
+
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
     justify-content: center;
-    align-items: center;
+    font-size: x-large;
     font-family: "Montserrat";
     font-weight: bold;
     color: white;
     background-color: #24292E;
+
+    background-image: url(../img/GloboBackgroundMobile.png);
+    background-repeat: no-repeat;
 }
 
-@media (max-width: 430px) {
+.bannerContent {
+    display: flex;
+    height: 50vh;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.bannerBottm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 35vh;
+}
+
+.bannerScroll  {
+    display: flex;
+    justify-content: center;
+}
+
+.detailImg {
+    max-width: 10%;
+    margin: 5%;
+}
+
+.detailImg3 {
+    max-width: 10%;
+    margin: 5%;
+}
+
+.logoContent {
+    height: 20vh;
+}
+
+.bannerText {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 450px) {
+    .imgMob {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
     .banner {
-        font-size: small;
+        font-size: x-large;
     }
     .sliderTitle{
-        font-size: small;
+        font-size: medium;
+    }
+    .imgDesk{
+        display: none;
     }
 }
 
 @media (min-width: 950px) {
+    .banner {
+        height: 100vh;
+        background-image: url(../img/GloboBackgroundDesktop.png);
+    }
+    .bannerContent{
+        height: 50vh;
+    }
+    .bannerBottm {
+        display: flex;
+        max-height: 50vh;
+        margin-top: 20vh;
+    }
+
     .sliderTitle{
         font-size: 2rem;
     }
 
     .carousel-caption{        
         margin-bottom: 10%;
+    }
+
+    .bannerText {
+        font-size: 4rem;
+        white-space: wrap;
+        margin: 5rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    .detailImg3{
+        display: none;
     }
 }
 
@@ -51,7 +132,6 @@ main::before {
     opacity: 0.1; /* Ajusta a opacidade da imagem */
     z-index: -1; /* Garante que o pseudoelemento fique atrás do conteúdo */
 }
-
 
 /* Estilos gerais do rodapé */
 .footer-container {
@@ -97,11 +177,6 @@ main::before {
         display: none;
         /* Esconder logotipo em telas pequenas */
     }
-
-    body {
-        padding-top: 5rem;
-    }
-
 }
 
 /* Texto em negrito no rodapé */
